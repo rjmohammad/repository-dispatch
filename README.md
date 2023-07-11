@@ -1,5 +1,5 @@
 # Repository Dispatch
-[![CI](https://github.com/peter-evans/repository-dispatch/workflows/CI/badge.svg)](https://github.com/peter-evans/repository-dispatch/actions?query=workflow%3ACI)
+[![CI](https://github.com/rjmohammad/repository-dispatch/workflows/CI/badge.svg)](https://github.com/rjmohammad/repository-dispatch/actions?query=workflow%3ACI)
 [![GitHub Marketplace](https://img.shields.io/badge/Marketplace-Repository%20Dispatch-blue.svg?colorA=24292e&colorB=0366d6&style=flat&longCache=true&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAM6wAADOsB5dZE0gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAERSURBVCiRhZG/SsMxFEZPfsVJ61jbxaF0cRQRcRJ9hlYn30IHN/+9iquDCOIsblIrOjqKgy5aKoJQj4O3EEtbPwhJbr6Te28CmdSKeqzeqr0YbfVIrTBKakvtOl5dtTkK+v4HfA9PEyBFCY9AGVgCBLaBp1jPAyfAJ/AAdIEG0dNAiyP7+K1qIfMdonZic6+WJoBJvQlvuwDqcXadUuqPA1NKAlexbRTAIMvMOCjTbMwl1LtI/6KWJ5Q6rT6Ht1MA58AX8Apcqqt5r2qhrgAXQC3CZ6i1+KMd9TRu3MvA3aH/fFPnBodb6oe6HM8+lYHrGdRXW8M9bMZtPXUji69lmf5Cmamq7quNLFZXD9Rq7v0Bpc1o/tp0fisAAAAASUVORK5CYII=)](https://github.com/marketplace/actions/repository-dispatch)
 
 A GitHub action to create a repository dispatch event.
@@ -9,7 +9,7 @@ A GitHub action to create a repository dispatch event.
 Dispatch an event to the current repository.
 ```yml
       - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v2
+        uses: rjmohammad/repository-dispatch@v2
         with:
           event-type: my-event
 ```
@@ -17,7 +17,7 @@ Dispatch an event to the current repository.
 Dispatch an event to a remote repository using a `repo` scoped [Personal Access Token (PAT)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 ```yml
       - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v2
+        uses: rjmohammad/repository-dispatch@v2
         with:
           token: ${{ secrets.PAT }}
           repository: username/my-repo
@@ -51,7 +51,7 @@ Here is an example setting all of the input parameters.
 
 ```yml
       - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v2
+        uses: rjmohammad/repository-dispatch@v2
         with:
           token: ${{ secrets.PAT }}
           repository: username/my-repo
@@ -94,7 +94,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Repository Dispatch
-        uses: peter-evans/repository-dispatch@v2
+        uses: rjmohammad/repository-dispatch@v2
         with:
           token: ${{ secrets.PAT }}
           repository: ${{ matrix.repo }}
